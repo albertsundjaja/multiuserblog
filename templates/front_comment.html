@@ -1,0 +1,13 @@
+{% extends "basecomment.html" %}
+
+{% block content %}
+  <a href="/">Home</a>
+  <a href="/blog/comment/newcomment/{{post_id}}">New Comment</a>
+  {% if comments %}
+    {% for c in comments %}
+        {{ c.render() | safe }}
+        <br><br>
+    {% endfor %}
+  {% endif %}
+
+{% endblock %}

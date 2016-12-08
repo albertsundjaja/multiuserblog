@@ -1,0 +1,19 @@
+{% extends "basecomment.html" %}
+
+{% block content %}
+
+  <h2>write comment</h2>
+  <a href="/blog/comment/{{post_id}}">Back</a>
+    <form method="post">
+
+      <label>
+        <div>comment</div>
+        <textarea name="content">{{content}}</textarea>
+      </label>
+
+      <div class="error">{{error}}</div>
+
+      <input type="submit">
+    </form>
+
+{% endblock %}
